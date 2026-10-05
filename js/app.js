@@ -37,7 +37,7 @@ function layout(active) {
     <div><h4>${esc(SITE.name)}</h4><p>Quality furniture, made in the UAE for homes, offices and hotels.</p></div>
     <div><h4>Collections</h4><ul>${CATEGORIES.map((c) => `<li><a href="category.html?cat=${c.id}">${c.name}</a></li>`).join("")}</ul></div>
     <div><h4>Contact</h4><ul>
-      <li><a href="tel:${SITE.phone.replace(/\s/g, "")}">${SITE.phone}</a></li>
+      <li><a href="tel:${SITE.phone.replace(/\s/g, "")}">Tel: ${SITE.phone}</a></li>
       ${SITE.whatsapp.map((c) => `<li><a href="${waLink("Hello, I would like to enquire about your furniture.", c)}" target="_blank" rel="noopener">${esc(c.name)}: ${c.display}</a></li>`).join("")}
       <li><a href="mailto:${SITE.email}">${esc(SITE.email)}</a></li><li>${esc(SITE.city)}</li></ul></div></div>
     <div class="copy">© ${new Date().getFullYear()} ${esc(SITE.name)}. All rights reserved.</div></div>
@@ -103,7 +103,7 @@ function contact() {
     PRODUCTS.map((p) => `<option>${esc(p.name)}</option>`).join("");
   if (param("product")) sel.value = param("product");
   $("#send-to").innerHTML = SITE.whatsapp.map((c, i) => `<option value="${i}">${esc(c.name)} (${c.display})</option>`).join("");
-  $("#c-phone").textContent = SITE.phone;
+  $("#c-phone").textContent = "Tel: " + SITE.phone;
   $("#c-phone").href = "tel:" + SITE.phone.replace(/\s/g, "");
   $("#c-email").textContent = SITE.email;
   $("#c-email").href = "mailto:" + SITE.email;
