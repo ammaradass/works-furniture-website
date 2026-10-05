@@ -3,7 +3,8 @@
 
 const $ = (s) => document.querySelector(s);
 const param = (k) => new URLSearchParams(location.search).get(k);
-const waLink = (text) => `https://wa.me/${SITE.whatsapp}?text=${encodeURIComponent(text)}`;
+const waLink = (text, c = SITE.whatsapp[0]) => `https://wa.me/${c.number}?text=${encodeURIComponent(text)}`;
+const waButtons = (text, cls = "btn wa") => SITE.whatsapp.map((c) => `<a class="${cls}" target="_blank" rel="noopener" href="${waLink(text, c)}">WhatsApp ${esc(c.name)}</a>`).join("");
 const catName = (id) => (CATEGORIES.find((c) => c.id === id) || {}).name || "";
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const priceText = (p) => (p.price ? `AED ${Number(p.price).toLocaleString()}` : "Price on request");
@@ -37,8 +38,8 @@ function layout(active) {
     <div><h4>Collections</h4><ul>${CATEGORIES.map((c) => `<li><a href="category.html?cat=${c.id}">${c.name}</a></li>`).join("")}</ul></div>
     <div><h4>Contact</h4><ul>
       <li><a href="tel:${SITE.phone.replace(/\s/g, "")}">${SITE.phone}</a></li>
-      <li><a href="${waLink("Hello, I would like to enquire about your furniture.")}">WhatsApp us</a></li>
-      <li>${esc(SITE.email)}</li><li>${esc(SITE.city)}</li></ul></div></div>
+      ${SITE.whatsapp.map((c) => `<li><a href="${waLink("Hello, I would like to enquire about your furniture.", c)}" target="_blank" rel="noopener">${esc(c.name)}: ${c.display}</a></li>`).join("")}
+      <li><a href="mailto:${SITE.email}">${esc(SITE.email)}</a></li><li>${esc(SITE.city)}</li></ul></div></div>
     <div class="copy">© ${new Date().getFullYear()} ${esc(SITE.name)}. All rights reserved.</div></div>
     <a class="fab" href="${waLink("Hello, I would like to enquire about your furniture.")}" target="_blank" rel="noopener">WhatsApp</a>`;
 }
@@ -88,7 +89,7 @@ function product() {
         ${row("Colours / fabrics", (p.colors || []).join(", "))}
       </dl>
       <div class="btn-row">
-        <a class="btn wa" target="_blank" rel="noopener" href="${waLink(msg)}">Enquire on WhatsApp</a>
+        ${waButtons(msg)}
         <a class="btn ghost" href="contact.html?product=${encodeURIComponent(p.name)}">Send an enquiry</a></div></div>`;
   document.querySelectorAll(".thumbs img").forEach((t) => (t.onclick = () => {
     $("#main").innerHTML = `<img src="${t.src}" alt="${t.alt}">`;
@@ -101,19 +102,21 @@ function contact() {
   sel.innerHTML = '<option value="General enquiry">General enquiry</option>' +
     PRODUCTS.map((p) => `<option>${esc(p.name)}</option>`).join("");
   if (param("product")) sel.value = param("product");
+  $("#send-to").innerHTML = SITE.whatsapp.map((c, i) => `<option value="${i}">${esc(c.name)} (${c.display})</option>`).join("");
   $("#c-phone").textContent = SITE.phone;
   $("#c-phone").href = "tel:" + SITE.phone.replace(/\s/g, "");
   $("#c-email").textContent = SITE.email;
+  $("#c-email").href = "mailto:" + SITE.email;
   $("#c-addr").textContent = SITE.address;
   $("#c-hours").textContent = SITE.hours;
-  $("#c-wa").href = waLink("Hello, I would like to enquire about your furniture.");
+  $("#c-wa").innerHTML = waButtons("Hello, I would like to enquire about your furniture.");
   $("#map").src = "https://www.google.com/maps?q=" + encodeURIComponent(SITE.address) + "&output=embed";
   /* The form opens WhatsApp with the message filled in – no server needed. */
   $("#enquiry").onsubmit = (e) => {
     e.preventDefault();
     const f = new FormData(e.target);
     const text = `New enquiry\nName: ${f.get("name")}\nPhone: ${f.get("phone")}\nEmail: ${f.get("email") || "-"}\nInterested in: ${f.get("interest")}\nMessage: ${f.get("message")}`;
-    window.open(waLink(text), "_blank");
+    window.open(waLink(text, SITE.whatsapp[+$("#send-to").value]), "_blank");
   };
 }
 

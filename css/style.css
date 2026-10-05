@@ -130,7 +130,3 @@ footer li { list-style: none; margin-bottom: 6px; }
 footer a:hover { color: var(--gold); }
 .copy { border-top: 1px solid #3a362f; margin-top: 32px; padding-top: 18px; font-size: .8rem; color: #8d877b; }
 .fab { position: fixed; right: 16px; bottom: 16px; z-index: 20; background: var(--wa); color: #fff; padding: 13px 20px; border-radius: 40px; font-size: .9rem; box-shadow: 0 6px 20px rgba(0,0,0,.25); }
-
-/* Arabic / RTL support (used when <html dir="rtl">) */
-[dir="rtl"] body { font-family: "Tajawal", var(--sans); }
-[dir="rtl"] .fab { right: auto; left: 16px; }

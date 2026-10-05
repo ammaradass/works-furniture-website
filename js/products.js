@@ -7,9 +7,13 @@ const SITE = {
   name: "Works Manufacturing Office Furniture",
   short: "Works Furniture",
   city: "Umm Al Quwain, UAE",
-  phone: "+971 52 977 7309",
-  whatsapp: "971529777309",            // digits only, no + or spaces
-  email: "info@YOUR-DOMAIN.com",       // TODO: put your real email here
+  phone: "+971 6 767 8388",            // landline
+  /* WhatsApp contacts. The FIRST one is used for the floating button. */
+  whatsapp: [
+    { name: "Karam Kilan", number: "971509746547", display: "+971 50 974 6547" },
+    { name: "Ammar Adas",  number: "971505186336", display: "+971 50 518 6336" },
+  ],
+  email: "t.khan@worksfurniture.com",
   address: "Umm Al Quwain, United Arab Emirates", // TODO: add street / showroom address
   hours: "Sat – Thu: 9:00 – 18:00",    // TODO: confirm opening hours
 };
