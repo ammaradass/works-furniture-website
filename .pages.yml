@@ -1,0 +1,37 @@
+# Admin page settings (Pages CMS: https://app.pagescms.org)
+media:
+  input: images
+  output: images
+  extensions: [jpg, jpeg, png, webp]
+
+content:
+  - name: products
+    label: Products
+    type: file
+    path: data/products.json
+    format: json
+    fields:
+      - name: products
+        label: Products
+        type: object
+        list:
+          min: 0
+        fields:
+          - { name: name, label: Product name, type: string, required: true }
+          - name: category
+            label: Category
+            type: select
+            required: true
+            options:
+              values:
+                - { value: sofas, label: Sofas & Seating }
+                - { value: reception, label: Reception Desks }
+                - { value: desks, label: Office Desks }
+                - { value: cabinets, label: Cabinets }
+          - { name: short, label: Short description, type: text }
+          - { name: images, label: Photos (first one is the main photo), type: image, list: true }
+          - { name: dims, label: "Size, e.g. 200 x 90 x 75 (W x D x H in cm)", type: string }
+          - { name: materials, label: Materials, type: string }
+          - { name: colors, label: Colours / fabrics, type: string, list: true }
+          - { name: price, label: Price in AED (leave empty for "Price on request"), type: number }
+          - { name: featured, label: Show on the Home page, type: boolean }

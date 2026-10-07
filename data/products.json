@@ -1,0 +1,145 @@
+{
+  "products": [
+    {
+      "id": "modular-lounge-sofa",
+      "category": "sofas",
+      "featured": true,
+      "name": "Modular Lounge Sofa",
+      "short": "A modular corner sofa in soft neutral tones – perfect for meeting lounges and executive suites. Arrange it to fit your space.",
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null,
+      "images": [
+        "images/modular-lounge-sofa.jpg"
+      ]
+    },
+    {
+      "id": "lounge-chair-walnut",
+      "category": "sofas",
+      "featured": true,
+      "name": "Walnut Lounge Chair",
+      "short": "A sculpted lounge chair with a plush cream seat on a solid wood base. Warm, modern and very comfortable.",
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null,
+      "images": [
+        "images/lounge-chair-walnut.jpg"
+      ]
+    },
+    {
+      "id": "round-lounge-chair",
+      "category": "sofas",
+      "featured": false,
+      "name": "Round Lounge Chair",
+      "short": "A soft, rounded armchair with a curved back. Ideal for hotel lobbies, lounges and reading corners.",
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null,
+      "images": [
+        "images/round-lounge-chair.jpg"
+      ]
+    },
+    {
+      "id": "mesh-reception-desk",
+      "category": "reception",
+      "featured": true,
+      "name": "Mesh Reception Desk",
+      "short": "A bold reception desk with a black metal mesh front and a marble-look top. Add your own signage.",
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null,
+      "images": [
+        "images/mesh-reception-desk-1.jpg",
+        "images/mesh-reception-desk-2.jpg"
+      ]
+    },
+    {
+      "id": "illuminated-reception-desk",
+      "category": "reception",
+      "featured": false,
+      "name": "Illuminated Reception Desk",
+      "short": "A sleek white reception desk with a glass front and soft LED lighting that carries your company logo.",
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null,
+      "images": [
+        "images/illuminated-reception-desk.jpg"
+      ]
+    },
+    {
+      "id": "curved-reception-desk",
+      "category": "reception",
+      "featured": true,
+      "name": "Curved Reception Desk",
+      "short": "A flowing, curved reception desk in clean white with accent details. Made to welcome guests in large lobbies.",
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null,
+      "images": [
+        "images/curved-reception-desk.jpg"
+      ]
+    },
+    {
+      "id": "workstation-planter",
+      "category": "desks",
+      "featured": false,
+      "name": "Workstation with Planter",
+      "short": "A shared workstation with privacy screens, drawers and a built-in planter that brings greenery to the office.",
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null,
+      "images": [
+        "images/workstation-planter.jpg"
+      ]
+    },
+    {
+      "id": "executive-desk-walnut",
+      "category": "desks",
+      "featured": true,
+      "name": "Executive Desk – Walnut",
+      "short": "A confident executive desk with a rich wood top and soft grey panels, with a side return for extra space.",
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null,
+      "images": [
+        "images/executive-desk-walnut.jpg"
+      ]
+    },
+    {
+      "id": "executive-desk-cream",
+      "category": "desks",
+      "featured": false,
+      "name": "Executive Desk – Cream",
+      "short": "A modern L-shaped desk in cream and tan with a cable port and a distinctive leather-style detail.",
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null,
+      "images": [
+        "images/executive-desk-cream.jpg"
+      ]
+    },
+    {
+      "id": "tv-wall-unit",
+      "category": "cabinets",
+      "featured": true,
+      "name": "TV Wall Unit with LED Shelves",
+      "short": "A made-to-measure wall unit with a tall display tower, a long low cabinet and warm LED lighting.",
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null,
+      "images": [
+        "images/tv-wall-unit.jpg"
+      ]
+    }
+  ]
+}

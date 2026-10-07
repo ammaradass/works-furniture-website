@@ -123,8 +123,27 @@ function contact() {
   };
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+const slug = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+/* Products come from data/products.json (edited in the admin page). */
+async function loadProducts() {
+  try {
+    const data = await fetch("data/products.json", { cache: "no-cache" }).then((r) => r.json());
+    PRODUCTS = (data.products || []).map((p) => ({
+      ...p,
+      id: p.id || slug(p.name),
+      dims: p.dims || null,
+      materials: p.materials || null,
+      colors: p.colors || [],
+      price: p.price || null,
+      images: (p.images || []).map((i) => String(i).replace(/^\//, "")),
+    }));
+  } catch (e) { PRODUCTS = []; }
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
   const page = document.body.dataset.page;
   layout(page);
+  await loadProducts();
   ({ home, category, product, contact })[page]?.();
 });
