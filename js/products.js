@@ -14,8 +14,13 @@ const SITE = {
     { name: "Ammar Adas",  number: "971505186336", display: "+971 50 518 6336" },
   ],
   email: "t.khan@worksfurniture.com",
-  address: "Umm Al Quwain, United Arab Emirates", // TODO: add street / showroom address
-  hours: "Sat – Thu: 9:00 – 18:00",    // TODO: confirm opening hours
+  /* We are a factory, not a showroom. */
+  address: "Umm Al Thuoob, Umm Al Quwain, United Arab Emirates",
+  hours: "Monday – Saturday: 8:30 AM – 5:00 PM",
+  /* "Get directions" button: your Google Maps link for the factory. */
+  mapLink: "https://maps.app.goo.gl/q7M5oP9CopusNy9C8",
+  /* Exact factory pin for the map on the Contact page (coordinates from Google Maps). */
+  mapSearch: "25.561376,55.6627056",
 };
 
 /* Categories. To add one, copy a line and change it. */
