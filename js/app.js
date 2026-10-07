@@ -61,7 +61,7 @@ function category() {
   $("#filters").innerHTML = [`<a href="category.html" class="${c ? "" : "active"}">All</a>`]
     .concat(CATEGORIES.map((x) => `<a href="category.html?cat=${x.id}" class="${x === c ? "active" : ""}">${x.name}</a>`)).join("");
   $("#cat-title").textContent = c ? c.name : "Our Collections";
-  $("#cat-blurb").textContent = c ? c.blurb : "Browse sofas, tables, cabinets and more.";
+  $("#cat-blurb").textContent = c ? c.blurb : "Browse sofas, reception desks, office desks and cabinets.";
   document.title = `${c ? c.name : "Collections"} | ${SITE.name}, ${SITE.city}`;
   const list = PRODUCTS.filter((p) => !c || p.category === c.id);
   $("#list").innerHTML = list.length ? list.map(card).join("") : "<p>New pieces arriving soon.</p>";

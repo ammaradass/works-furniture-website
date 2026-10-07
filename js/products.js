@@ -20,58 +20,88 @@ const SITE = {
 
 /* Categories. To add one, copy a line and change it. */
 const CATEGORIES = [
-  { id: "sofas",    name: "Sofas",    blurb: "Comfort and craftsmanship for living rooms, lobbies and lounges." },
-  { id: "tables",   name: "Tables",   blurb: "Dining, coffee, meeting and office tables built to last." },
-  { id: "cabinets", name: "Cabinets", blurb: "Elegant storage for homes, offices and hotels." },
+  { id: "sofas",     name: "Sofas & Seating",  blurb: "Sofas and lounge chairs that bring comfort to lobbies, lounges and living rooms." },
+  { id: "reception", name: "Reception Desks",  blurb: "Make a first impression with a custom reception desk." },
+  { id: "desks",     name: "Office Desks",     blurb: "Executive desks and workstations designed for focus and style." },
+  { id: "cabinets",  name: "Cabinets",         blurb: "Elegant storage and wall units for homes, offices and hotels." },
 ];
 
 /* Products.
    - images: list of files, e.g. ["images/sofa-1-a.jpg", "images/sofa-1-b.jpg"]
-   - dims: "W x D x H cm" text, or null
+   - dims: "W x D x H" in cm, or null (shows "Available on request")
+   - materials / colors: fill in when you have them, or leave empty
    - price: a number in AED (e.g. 2500) or null = "Price on request"
    - featured: true to show on the Home page
-   The items below are SAMPLES with placeholder text – replace with your real products. */
+   Sizes and materials are discussed with each customer, so they are left empty for now. */
 const PRODUCTS = [
   {
-    id: "sofa-01", category: "sofas", featured: true,
-    name: "Sample Sofa 1",
-    short: "A welcoming sofa with deep seats and clean lines. [Replace with your description]",
-    dims: null, materials: null,
-    colors: [], price: null, images: [],
+    id: "modular-lounge-sofa", category: "sofas", featured: true,
+    name: "Modular Lounge Sofa",
+    short: "A modular corner sofa in soft neutral tones – perfect for meeting lounges and executive suites. Arrange it to fit your space.",
+    dims: null, materials: null, colors: [], price: null,
+    images: ["images/modular-lounge-sofa.jpg"],
   },
   {
-    id: "sofa-02", category: "sofas", featured: true,
-    name: "Sample Sofa 2",
-    short: "Modern comfort for living rooms and lobbies. [Replace with your description]",
-    dims: null, materials: null,
-    colors: [], price: null, images: [],
+    id: "lounge-chair-walnut", category: "sofas", featured: true,
+    name: "Walnut Lounge Chair",
+    short: "A sculpted lounge chair with a plush cream seat on a solid wood base. Warm, modern and very comfortable.",
+    dims: null, materials: null, colors: [], price: null,
+    images: ["images/lounge-chair-walnut.jpg"],
   },
   {
-    id: "table-01", category: "tables", featured: true,
-    name: "Sample Table 1",
-    short: "A statement table that anchors the room. [Replace with your description]",
-    dims: null, materials: null,
-    colors: [], price: null, images: [],
+    id: "round-lounge-chair", category: "sofas", featured: false,
+    name: "Round Lounge Chair",
+    short: "A soft, rounded armchair with a curved back. Ideal for hotel lobbies, lounges and reading corners.",
+    dims: null, materials: null, colors: [], price: null,
+    images: ["images/round-lounge-chair.jpg"],
   },
   {
-    id: "table-02", category: "tables", featured: false,
-    name: "Sample Table 2",
-    short: "Practical and refined for meetings and dining. [Replace with your description]",
-    dims: null, materials: null,
-    colors: [], price: null, images: [],
+    id: "mesh-reception-desk", category: "reception", featured: true,
+    name: "Mesh Reception Desk",
+    short: "A bold reception desk with a black metal mesh front and a marble-look top. Add your own signage.",
+    dims: null, materials: null, colors: [], price: null,
+    images: ["images/mesh-reception-desk-1.jpg", "images/mesh-reception-desk-2.jpg"],
   },
   {
-    id: "cabinet-01", category: "cabinets", featured: true,
-    name: "Sample Cabinet 1",
-    short: "Smart storage with a quietly luxurious finish. [Replace with your description]",
-    dims: null, materials: null,
-    colors: [], price: null, images: [],
+    id: "illuminated-reception-desk", category: "reception", featured: false,
+    name: "Illuminated Reception Desk",
+    short: "A sleek white reception desk with a glass front and soft LED lighting that carries your company logo.",
+    dims: null, materials: null, colors: [], price: null,
+    images: ["images/illuminated-reception-desk.jpg"],
   },
   {
-    id: "cabinet-02", category: "cabinets", featured: false,
-    name: "Sample Cabinet 2",
-    short: "Organised, elegant and made to last. [Replace with your description]",
-    dims: null, materials: null,
-    colors: [], price: null, images: [],
+    id: "curved-reception-desk", category: "reception", featured: true,
+    name: "Curved Reception Desk",
+    short: "A flowing, curved reception desk in clean white with accent details. Made to welcome guests in large lobbies.",
+    dims: null, materials: null, colors: [], price: null,
+    images: ["images/curved-reception-desk.jpg"],
+  },
+  {
+    id: "workstation-planter", category: "desks", featured: false,
+    name: "Workstation with Planter",
+    short: "A shared workstation with privacy screens, drawers and a built-in planter that brings greenery to the office.",
+    dims: null, materials: null, colors: [], price: null,
+    images: ["images/workstation-planter.jpg"],
+  },
+  {
+    id: "executive-desk-walnut", category: "desks", featured: true,
+    name: "Executive Desk – Walnut",
+    short: "A confident executive desk with a rich wood top and soft grey panels, with a side return for extra space.",
+    dims: null, materials: null, colors: [], price: null,
+    images: ["images/executive-desk-walnut.jpg"],
+  },
+  {
+    id: "executive-desk-cream", category: "desks", featured: false,
+    name: "Executive Desk – Cream",
+    short: "A modern L-shaped desk in cream and tan with a cable port and a distinctive leather-style detail.",
+    dims: null, materials: null, colors: [], price: null,
+    images: ["images/executive-desk-cream.jpg"],
+  },
+  {
+    id: "tv-wall-unit", category: "cabinets", featured: true,
+    name: "TV Wall Unit with LED Shelves",
+    short: "A made-to-measure wall unit with a tall display tower, a long low cabinet and warm LED lighting.",
+    dims: null, materials: null, colors: [], price: null,
+    images: ["images/tv-wall-unit.jpg"],
   },
 ];
