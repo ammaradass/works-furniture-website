@@ -27,6 +27,7 @@ content:
                 - { value: sofas, label: Sofas & Seating }
                 - { value: reception, label: Reception Desks }
                 - { value: desks, label: Office Desks }
+                - { value: tables, label: Tables }
                 - { value: cabinets, label: Cabinets }
           - { name: short, label: Short description, type: text }
           - { name: images, label: Photos (first one is the main photo), type: image, list: true }

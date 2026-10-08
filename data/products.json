@@ -140,6 +140,34 @@
       "images": [
         "images/tv-wall-unit.jpg"
       ]
+    },
+    {
+      "id": "round-coffee-table",
+      "category": "tables",
+      "name": "Round Coffee Table",
+      "short": "A low, round coffee table with a smooth wood-finish top and a clean, solid look. Fits lounges, lobbies and living rooms.",
+      "images": [
+        "images/round-coffee-table.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "grey-storage-cabinets",
+      "category": "cabinets",
+      "name": "Tall Grey Storage Cabinets",
+      "short": "Floor-to-ceiling storage cabinets in a calm matt grey with slim handles. Made to fit your wall in offices and homes.",
+      "images": [
+        "images/grey-storage-cabinets.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
     }
   ]
 }

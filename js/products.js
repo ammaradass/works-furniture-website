@@ -30,6 +30,7 @@ const CATEGORIES = [
   { id: "sofas",     name: "Sofas & Seating",  blurb: "Sofas and lounge chairs that bring comfort to lobbies, lounges and living rooms." },
   { id: "reception", name: "Reception Desks",  blurb: "Make a first impression with a custom reception desk." },
   { id: "desks",     name: "Office Desks",     blurb: "Executive desks and workstations designed for focus and style." },
+  { id: "tables",     name: "Tables",           blurb: "Coffee tables and side tables for lounges, lobbies and living rooms." },
   { id: "cabinets",  name: "Cabinets",         blurb: "Elegant storage and wall units for homes, offices and hotels." },
 ];
 
