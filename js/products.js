@@ -20,6 +20,8 @@ const SITE = {
   /* "Get directions" button: your Google Maps link for the factory. */
   mapLink: "https://maps.app.goo.gl/q7M5oP9CopusNy9C8",
   /* Exact factory pin for the map on the Contact page (coordinates from Google Maps). */
+  /* Google Analytics Measurement ID (starts with G-). Leave empty to turn tracking off. */
+  analyticsId: "",
   mapSearch: "25.561376,55.6627056",
 };
 

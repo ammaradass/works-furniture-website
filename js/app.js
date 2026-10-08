@@ -141,7 +141,21 @@ async function loadProducts() {
   } catch (e) { PRODUCTS = []; }
 }
 
+/* Visitor statistics (private, shown only in your Google Analytics account). */
+function analytics() {
+  if (!SITE.analyticsId) return;
+  const s = document.createElement("script");
+  s.async = true;
+  s.src = "https://www.googletagmanager.com/gtag/js?id=" + SITE.analyticsId;
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { dataLayer.push(arguments); };
+  gtag("js", new Date());
+  gtag("config", SITE.analyticsId);
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
+  analytics();
   const page = document.body.dataset.page;
   layout(page);
   await loadProducts();
