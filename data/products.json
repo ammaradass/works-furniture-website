@@ -1,11 +1,11 @@
-{
+﻿{
   "products": [
     {
       "id": "modular-lounge-sofa",
       "category": "sofas",
       "featured": true,
       "name": "Modular Lounge Sofa",
-      "short": "A modular corner sofa in soft neutral tones – perfect for meeting lounges and executive suites. Arrange it to fit your space.",
+      "short": "A modular corner sofa in soft neutral tones â€“ perfect for meeting lounges and executive suites. Arrange it to fit your space.",
       "dims": null,
       "materials": null,
       "colors": [],
@@ -103,7 +103,7 @@
       "id": "executive-desk-walnut",
       "category": "desks",
       "featured": true,
-      "name": "Executive Desk – Walnut",
+      "name": "Executive Desk â€“ Walnut",
       "short": "A confident executive desk with a rich wood top and soft grey panels, with a side return for extra space.",
       "dims": null,
       "materials": null,
@@ -117,7 +117,7 @@
       "id": "executive-desk-cream",
       "category": "desks",
       "featured": false,
-      "name": "Executive Desk – Cream",
+      "name": "Executive Desk â€“ Cream",
       "short": "A modern L-shaped desk in cream and tan with a cable port and a distinctive leather-style detail.",
       "dims": null,
       "materials": null,
@@ -329,7 +329,7 @@
       "name": "Upholstered Bed",
       "short": "A soft beige bed with a tall channel-stitched headboard and a padded frame, shown with matching bedside tables.",
       "images": [
-        "images/upholstered-bed.jpg"
+        "images/upholstered-bed-white.jpg"
       ],
       "featured": true,
       "dims": null,
