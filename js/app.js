@@ -26,7 +26,7 @@ function card(p) {
 function layout(active) {
   const links = [["index.html", "Home", "home"], ["category.html", "Collections", "category"], ["about.html", "About", "about"], ["contact.html", "Contact", "contact"]];
   $("#site-header").innerHTML = `<div class="wrap nav">
-    <a class="logo" href="index.html">${esc(SITE.short)}<small>Office &amp; Home Furniture</small></a>
+    <a class="logo" href="index.html" aria-label="${esc(SITE.name)}"><img src="images/logo.png" alt="" width="52" height="37"><span>${esc(SITE.short)}<small>Office &amp; Home Furniture</small></span></a>
     <button class="burger" aria-label="Menu" aria-expanded="false">☰</button>
     <nav><ul>${links.map((l) => `<li><a href="${l[0]}" class="${l[2] === active ? "active" : ""}">${l[1]}</a></li>`).join("")}</ul></nav></div>`;
   $(".burger").onclick = (e) => {

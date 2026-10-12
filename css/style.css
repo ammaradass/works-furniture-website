@@ -27,7 +27,8 @@ section { padding: clamp(48px, 8vw, 96px) 0; }
 /* Header */
 header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
 .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
-.logo { font-family: var(--serif); font-size: 1.25rem; font-weight: 600; letter-spacing: .02em; line-height: 1.1; }
+.logo { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-size: 1.25rem; font-weight: 600; letter-spacing: .02em; line-height: 1.1; }
+.logo img { height: 37px; width: auto; }
 .logo small { display: block; font-family: var(--sans); font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-dark); font-weight: 400; }
 nav ul { display: flex; gap: 28px; list-style: none; }
 nav a { font-size: .9rem; padding: 6px 0; border-bottom: 1px solid transparent; }
