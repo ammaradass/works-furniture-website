@@ -30,6 +30,7 @@ header { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.95
 .logo { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-size: 1.25rem; font-weight: 600; letter-spacing: .02em; line-height: 1.1; }
 .logo img { height: 37px; width: auto; }
 .logo small { display: block; font-family: var(--sans); font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-dark); font-weight: 400; }
+@media (max-width: 480px) { .logo { font-size: 1rem; gap: 8px; min-width: 0; } .logo img { height: 32px; } .logo small { font-size: .5rem; letter-spacing: .12em; } .logo span { max-width: 190px; } }
 nav ul { display: flex; gap: 28px; list-style: none; }
 nav a { font-size: .9rem; padding: 6px 0; border-bottom: 1px solid transparent; }
 nav a:hover, nav a.active { border-color: var(--gold); }

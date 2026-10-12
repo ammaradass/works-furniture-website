@@ -4,8 +4,8 @@
    ========================================================== */
 
 const SITE = {
-  name: "Works Manufacturing Office Furniture",
-  short: "Works Furniture",
+  name: "Works Manufacturing Furniture",
+  short: "Works Manufacturing Furniture",
   city: "Umm Al Quwain, UAE",
   phone: "+971 6 767 8388",            // landline
   /* WhatsApp contacts. The FIRST one is used for the floating button. */
