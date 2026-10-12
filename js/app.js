@@ -40,9 +40,9 @@ function layout(active) {
       <li><a href="tel:${SITE.phone.replace(/\s/g, "")}">Tel: ${SITE.phone}</a></li>
       ${SITE.whatsapp.map((c) => `<li><a href="${waLink("Hello, I would like to enquire about your furniture.", c)}" target="_blank" rel="noopener">${esc(c.name)}: ${c.display}</a></li>`).join("")}
       <li><a href="mailto:${SITE.email}">${esc(SITE.email)}</a></li><li>${esc(SITE.city)}</li></ul></div>
-    <div><h4>Visit the factory</h4><ul><li>${esc(SITE.hours)}</li>
-      <li><a href="${SITE.mapLink}" target="_blank" rel="noopener">Get directions</a></li></ul></div></div>
-    <div class="copy">© ${new Date().getFullYear()} ${esc(SITE.name)}. All rights reserved.</div></div>
+    <div><h4>Visit the factory</h4><ul><li>${esc(SITE.address)}</li><li>${esc(SITE.hours)}</li>
+      <li><a href="${SITE.mapLink}" target="_blank" rel="noopener">Get directions on Google Maps</a></li></ul></div></div>
+    <div class="copy">© ${new Date().getFullYear()} ${esc(SITE.legalName || SITE.name)}. All rights reserved.</div></div>
     <a class="fab" href="${waLink("Hello, I would like to enquire about your furniture.")}" target="_blank" rel="noopener">WhatsApp</a>`;
 }
 
@@ -113,6 +113,8 @@ function contact() {
   $("#c-hours").textContent = SITE.hours;
   $("#c-wa").innerHTML = waButtons("Hello, I would like to enquire about your furniture.");
   $("#c-directions").href = SITE.mapLink;
+  $("#map-directions").href = SITE.mapLink;
+  $("#map-addr").textContent = SITE.legalName + " · " + SITE.address + (SITE.plusCode ? " · " + SITE.plusCode : "");
   $("#map").src = "https://www.google.com/maps?q=" + encodeURIComponent(SITE.mapSearch) + "&output=embed";
   /* The form opens WhatsApp with the message filled in – no server needed. */
   $("#enquiry").onsubmit = (e) => {

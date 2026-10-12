@@ -6,6 +6,8 @@
 const SITE = {
   name: "Works Manufacturing Furniture",
   short: "Works Manufacturing Furniture",
+  /* Official company name (shown in the footer). */
+  legalName: "Works Manufacturing Office Furniture L.L.C",
   city: "Umm Al Quwain, UAE",
   phone: "+971 6 767 8388",            // landline
   /* WhatsApp contacts. The FIRST one is used for the floating button. */
@@ -19,6 +21,8 @@ const SITE = {
   hours: "Monday – Saturday: 8:30 AM – 5:00 PM",
   /* "Get directions" button: your Google Maps link for the factory. */
   mapLink: "https://maps.app.goo.gl/q7M5oP9CopusNy9C8",
+  /* Google Maps plus code for the factory (shown under the map). */
+  plusCode: "HM67+H34 Umm Al Quwain",
   /* Exact factory pin for the map on the Contact page (coordinates from Google Maps). */
   /* Google Analytics Measurement ID (starts with G-). Leave empty to turn tracking off. */
   analyticsId: "",
