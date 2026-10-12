@@ -27,8 +27,10 @@ content:
                 - { value: sofas, label: Sofas & Seating }
                 - { value: reception, label: Reception Desks }
                 - { value: desks, label: Office Desks }
+                - { value: meeting, label: Meeting Tables }
                 - { value: tables, label: Tables }
                 - { value: cabinets, label: Cabinets }
+                - { value: beds, label: Beds }
           - { name: short, label: Short description, type: text }
           - { name: images, label: Photos (first one is the main photo), type: image, list: true }
           - { name: dims, label: "Size, e.g. 200 x 90 x 75 (W x D x H in cm)", type: string }

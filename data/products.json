@@ -168,6 +168,174 @@
       "materials": null,
       "colors": [],
       "price": null
+    },
+    {
+      "id": "curved-lobby-sofa",
+      "category": "sofas",
+      "name": "Curved Lobby Sofa",
+      "short": "A long, curving cream sofa on a glossy red wood base with matching end tables. Made to measure for large lobbies and waiting areas.",
+      "images": [
+        "images/curved-lobby-sofa.jpg"
+      ],
+      "featured": true,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "beige-corner-sofa",
+      "category": "sofas",
+      "name": "Beige Corner Sofa",
+      "short": "A long L-shaped sofa in soft beige with deep seats on slim chrome legs. Ideal for libraries, lounges and waiting areas.",
+      "images": [
+        "images/beige-corner-sofa.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "grey-armchair",
+      "category": "sofas",
+      "name": "Grey Armchair",
+      "short": "A clean, boxy armchair in dark grey with a stitched back and polished chrome sled legs. Fits offices, lobbies and meeting rooms.",
+      "images": [
+        "images/grey-armchair.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "y-shaped-lobby-seating",
+      "category": "sofas",
+      "name": "Y-Shaped Lobby Seating",
+      "short": "Three-way bench seating with a built-in planter at the centre. Groups of seats for large lobbies, malls and public spaces.",
+      "images": [
+        "images/y-shaped-lobby-seating.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "wave-atrium-seating",
+      "category": "sofas",
+      "name": "Wave Atrium Seating",
+      "short": "Flowing, layered wooden seating built around tree planters. A striking centrepiece for atriums and open public halls.",
+      "images": [
+        "images/wave-atrium-seating.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "round-meeting-pod",
+      "category": "sofas",
+      "name": "Round Meeting Pod",
+      "short": "A tall, rounded booth with soft padded walls, built-in seating, a small table and LED lighting. A quiet spot for meetings in open offices.",
+      "images": [
+        "images/round-meeting-pod.jpg"
+      ],
+      "featured": true,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "orange-corner-sofa",
+      "category": "sofas",
+      "name": "Orange Corner Sofa",
+      "short": "A low L-shaped sofa with warm orange cushions on a wooden platform base, shown with a matching wood coffee table.",
+      "images": [
+        "images/orange-corner-sofa.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "marble-coffee-tables",
+      "category": "tables",
+      "name": "Marble Round Coffee Tables",
+      "short": "Round coffee tables with a white marble-look top on slim black legs. Use one alone or pair two sizes together.",
+      "images": [
+        "images/marble-coffee-tables.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "oval-meeting-table",
+      "category": "meeting",
+      "name": "Oval Meeting Table",
+      "short": "An oval meeting table in light wood with a sculpted base. Seats six comfortably in small meeting rooms.",
+      "images": [
+        "images/oval-meeting-table.jpg"
+      ],
+      "featured": true,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "oak-wardrobe",
+      "category": "cabinets",
+      "name": "Oak 3-Door Wardrobe",
+      "short": "A tall wardrobe in a light oak finish with three doors and two drawers. Simple, practical storage for bedrooms and staff rooms.",
+      "images": [
+        "images/oak-wardrobe.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "planter-cabinet",
+      "category": "cabinets",
+      "name": "Planter Cabinet with Slat Screen",
+      "short": "A walnut-finish storage cabinet with a planter on top, set in front of a wooden slat screen with an arch. Brings greenery and storage together.",
+      "images": [
+        "images/planter-cabinet.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "upholstered-bed",
+      "category": "beds",
+      "name": "Upholstered Bed",
+      "short": "A soft beige bed with a tall channel-stitched headboard and a padded frame, shown with matching bedside tables.",
+      "images": [
+        "images/upholstered-bed.jpg"
+      ],
+      "featured": true,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
     }
   ]
 }
