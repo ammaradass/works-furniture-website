@@ -14,6 +14,7 @@ const SITE = {
   whatsapp: [
     { name: "Karam Kilan", number: "971509746547", display: "+971 50 974 6547" },
     { name: "Ammar Adas",  number: "971505186336", display: "+971 50 518 6336" },
+    { name: "Secretary",   number: "971529777309", display: "+971 52 977 7309" },
   ],
   email: "t.khan@worksfurniture.com",
   /* We are a factory, not a showroom. */
