@@ -1,0 +1,109 @@
+{
+  "projects": [
+    {
+      "title": "Open-Plan Office",
+      "type": "Office",
+      "short": "Hexagon workstations for six people each, with white drawer units, light oak tops and grey fabric screens.",
+      "image": "images/hexagon-workstation.jpg",
+      "products": ["hexagon-workstation"]
+    },
+    {
+      "title": "Meeting Room",
+      "type": "Office",
+      "short": "An oval meeting table with six brown leather chairs and matching storage cabinets along the wall.",
+      "image": "images/oval-meeting-table.jpg",
+      "products": ["oval-meeting-table"]
+    },
+    {
+      "title": "Executive Lounge",
+      "type": "Office",
+      "short": "A modular lounge sofa in front of a glass boardroom with a long meeting table and chairs.",
+      "image": "images/modular-lounge-sofa.jpg",
+      "products": ["modular-lounge-sofa"]
+    },
+    {
+      "title": "Team Workstations",
+      "type": "Office",
+      "short": "Walnut bench desks with grey screens, mobile drawers, office chairs and a built-in planter.",
+      "image": "images/workstation-planter.jpg",
+      "products": ["workstation-planter"]
+    },
+    {
+      "title": "Hotel-Style Lounge",
+      "type": "Lounge",
+      "short": "Red and brown leather armchairs arranged in pairs, with side tables and table lamps.",
+      "image": "images/red-leather-lounge-chairs.jpg",
+      "products": ["red-leather-lounge-chairs"]
+    },
+    {
+      "title": "Guest Lounge",
+      "type": "Lounge",
+      "short": "Buttoned leather armchairs, tub chairs and sofas grouped around tables for a welcoming lounge.",
+      "image": "images/tufted-leather-armchairs.jpg",
+      "products": ["tufted-leather-armchairs"]
+    },
+    {
+      "title": "Sitting Area",
+      "type": "Lounge",
+      "short": "Round marble coffee tables with a sofa set, armchair and side tables.",
+      "image": "images/marble-coffee-tables.jpg",
+      "products": ["marble-coffee-tables"]
+    },
+    {
+      "title": "Customer Waiting Hall",
+      "type": "Public space",
+      "short": "Long upholstered benches with white cube tables, plus service desks and chairs.",
+      "image": "images/waiting-hall-benches.jpg",
+      "products": ["waiting-hall-benches"]
+    },
+    {
+      "title": "Lobby Seating",
+      "type": "Public space",
+      "short": "A long curved leather sofa with a wooden end table and a small side table.",
+      "image": "images/curved-lobby-sofa.jpg",
+      "products": ["curved-lobby-sofa"]
+    },
+    {
+      "title": "Atrium Seating",
+      "type": "Public space",
+      "short": "Y-shaped lounge seating units with built-in planters, spread across a bright atrium.",
+      "image": "images/y-shaped-lobby-seating.jpg",
+      "products": ["y-shaped-lobby-seating"]
+    },
+    {
+      "title": "Wooden Wave Seating",
+      "type": "Public space",
+      "short": "Stepped wooden wave seating with round tree planters at the centre of an atrium.",
+      "image": "images/wave-atrium-seating.jpg",
+      "products": ["wave-atrium-seating"]
+    },
+    {
+      "title": "Private Lounge",
+      "type": "Lounge",
+      "short": "A tan leather corner sofa on a wooden base with a matching wooden coffee table.",
+      "image": "images/orange-corner-sofa.jpg",
+      "products": ["orange-corner-sofa"]
+    },
+    {
+      "title": "Relaxing Corner",
+      "type": "Lounge",
+      "short": "A light grey curved corner sofa with a round black coffee table and an armchair.",
+      "image": "images/grey-curved-corner-sofa.jpg",
+      "products": ["grey-curved-corner-sofa"]
+    },
+    {
+      "title": "Living Room Wall Unit",
+      "type": "Home",
+      "short": "A tall lit shelving unit and a long low TV cabinet in walnut, with a backlit TV panel.",
+      "image": "images/tv-wall-unit.jpg",
+      "products": ["tv-wall-unit"]
+    },
+    {
+      "title": "Bedroom Set",
+      "type": "Home",
+      "short": "An upholstered bed with a tall channel headboard and two matching bedside tables.",
+      "image": "images/upholstered-bed-white.jpg",
+      "products": ["upholstered-bed"]
+    }
+  ]
+}

@@ -24,7 +24,7 @@ function card(p) {
 }
 
 function layout(active) {
-  const links = [["index.html", "Home", "home"], ["category.html", "Collections", "category"], ["about.html", "About", "about"], ["contact.html", "Contact", "contact"]];
+  const links = [["index.html", "Home", "home"], ["category.html", "Collections", "category"], ["projects.html", "Projects", "projects"], ["about.html", "About", "about"], ["contact.html", "Contact", "contact"]];
   $("#site-header").innerHTML = `<div class="wrap nav">
     <a class="logo" href="index.html" aria-label="${esc(SITE.name)}"><img src="images/logo.png" alt="" width="52" height="37"><span>${esc(SITE.short)}<small>Office &amp; Home Furniture</small></span></a>
     <button class="burger" aria-label="Menu" aria-expanded="false">☰</button>
@@ -125,6 +125,26 @@ function contact() {
   };
 }
 
+/* Projects come from data/projects.json (edited in the admin page). */
+async function projects() {
+  let list = [];
+  try { list = (await fetch("data/projects.json", { cache: "no-cache" }).then((r) => r.json())).projects || []; } catch (e) {}
+  const types = [...new Set(list.map((x) => x.type).filter(Boolean))];
+  const draw = (t) => {
+    $("#filters").innerHTML = ["All", ...types].map((x) => `<a href="#" data-t="${esc(x)}" class="${x === t ? "active" : ""}">${esc(x)}</a>`).join("");
+    $("#projects").innerHTML = list.filter((x) => t === "All" || x.type === t).map((x) => {
+      const items = (x.products || []).map((id) => PRODUCTS.find((p) => p.id === id)).filter(Boolean);
+      return `<article class="project">
+        <a class="pic" href="${esc(x.image)}" target="_blank" rel="noopener"><img src="${esc(x.image)}" alt="${esc(x.title)} furnished by ${esc(SITE.short)}" loading="lazy"></a>
+        <div class="body"><div class="tag">${esc(x.type || "")}</div><h3>${esc(x.title)}</h3><p>${esc(x.short || "")}</p>
+        <div class="links">${items.map((p) => `<a href="product.html?id=${encodeURIComponent(p.id)}">See the ${esc(p.name)}</a>`).join("")}
+        <a href="${waLink("Hello, I saw your " + x.title + " project on your website and would like something similar.")}" target="_blank" rel="noopener">Ask about a project like this</a></div></div></article>`;
+    }).join("");
+  };
+  $("#filters").onclick = (e) => { const a = e.target.closest("a"); if (a) { e.preventDefault(); draw(a.dataset.t); } };
+  draw("All");
+}
+
 const slug = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
 /* Products come from data/products.json (edited in the admin page). */
@@ -161,5 +181,5 @@ document.addEventListener("DOMContentLoaded", async () => {
   const page = document.body.dataset.page;
   layout(page);
   await loadProducts();
-  ({ home, category, product, contact })[page]?.();
+  ({ home, category, product, contact, projects })[page]?.();
 });

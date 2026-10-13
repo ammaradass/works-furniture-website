@@ -39,3 +39,21 @@ content:
           - { name: colors, label: Colours / fabrics, type: string, list: true }
           - { name: price, label: Price in AED (leave empty for "Price on request"), type: number }
           - { name: featured, label: Show on the Home page, type: boolean }
+
+  - name: projects
+    label: Projects
+    type: file
+    path: data/projects.json
+    format: json
+    fields:
+      - name: projects
+        label: Projects
+        type: object
+        list:
+          min: 0
+        fields:
+          - { name: title, label: Project name, type: string, required: true }
+          - { name: type, label: "Type, e.g. Office, Lounge, Home", type: string }
+          - { name: short, label: Short description, type: text }
+          - { name: image, label: Photo, type: image }
+          - { name: products, label: Product IDs shown in the photo (optional), type: string, list: true }
