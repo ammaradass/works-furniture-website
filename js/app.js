@@ -37,6 +37,7 @@ function layout(active) {
     <div><h4>Collections</h4><ul>${CATEGORIES.map((c) => `<li><a href="category.html?cat=${c.id}">${c.name}</a></li>`).join("")}</ul></div>
     <div><h4>Contact</h4><ul>
       <li><a href="tel:${SITE.phone.replace(/\s/g, "")}">Tel: ${SITE.phone}</a></li>
+      ${SITE.whatsapp.map((c) => `<li><a href="tel:+${c.number}">${esc(c.name)}: ${c.display}</a></li>`).join("")}
       <li><a href="mailto:${SITE.email}">${esc(SITE.email)}</a></li><li>${esc(SITE.city)}</li></ul></div>
     <div><h4>Visit the factory</h4><ul><li>${esc(SITE.address)}</li><li>${esc(SITE.hours)}</li>
       <li><a href="${SITE.mapLink}" target="_blank" rel="noopener">Get directions on Google Maps</a></li></ul></div></div>
