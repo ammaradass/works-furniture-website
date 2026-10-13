@@ -87,7 +87,7 @@
     },
     {
       "id": "workstation-planter",
-      "category": "desks",
+      "category": "workstations",
       "featured": false,
       "name": "Workstation with Planter",
       "short": "A shared workstation with privacy screens, drawers and a built-in planter that brings greenery to the office.",
@@ -409,7 +409,7 @@
     },
     {
       "id": "hexagon-workstation",
-      "category": "desks",
+      "category": "workstations",
       "name": "Hexagon Workstation",
       "short": "A six-person workstation with a light oak top, white drawer units and grey fabric screens around a central storage core.",
       "images": [

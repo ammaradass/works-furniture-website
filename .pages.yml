@@ -27,6 +27,7 @@ content:
                 - { value: sofas, label: Sofas & Seating }
                 - { value: reception, label: Reception Desks }
                 - { value: desks, label: Office Desks }
+                - { value: workstations, label: Workstations }
                 - { value: meeting, label: Meeting Tables }
                 - { value: tables, label: Tables }
                 - { value: cabinets, label: Cabinets }

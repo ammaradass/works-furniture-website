@@ -68,7 +68,7 @@ function category() {
   $("#filters").innerHTML = [`<a href="category.html" class="${c ? "" : "active"}">All</a>`]
     .concat(CATEGORIES.map((x) => `<a href="category.html?cat=${x.id}" class="${x === c ? "active" : ""}">${x.name}</a>`)).join("");
   $("#cat-title").textContent = c ? c.name : "Our Collections";
-  $("#cat-blurb").textContent = c ? c.blurb : "Browse sofas, reception desks, office desks, meeting tables, tables, cabinets, beds and wall panels.";
+  $("#cat-blurb").textContent = c ? c.blurb : "Browse sofas, reception desks, office desks, workstations, meeting tables, tables, cabinets, beds and wall panels.";
   document.title = `${c ? c.name : "Collections"} | ${SITE.name}, ${SITE.city}`;
   if (c) document.querySelector('meta[name="description"]').content = `${c.blurb} Made in our factory in ${SITE.city}.`;
   setCanonical(c ? `category.html?cat=${c.id}` : "category.html");
