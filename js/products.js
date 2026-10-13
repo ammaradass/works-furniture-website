@@ -10,11 +10,10 @@ const SITE = {
   legalName: "Works Manufacturing Office Furniture L.L.C",
   city: "Umm Al Quwain, UAE",
   phone: "+971 6 767 8388",            // landline
-  /* WhatsApp contacts. The FIRST one is used for the floating button. */
+  /* Salesmen: shown in the footer and in the Contact form "Send to" list. */
   whatsapp: [
     { name: "KARAM HILAN", number: "971509746547", display: "+971 50 974 6547" },
     { name: "Ammar Adas",  number: "971505186336", display: "+971 50 518 6336" },
-    { name: "Secretary",   number: "971529777309", display: "+971 52 977 7309" },
   ],
   email: "t.khan@worksfurniture.com",
   /* We are a factory, not a showroom. */
