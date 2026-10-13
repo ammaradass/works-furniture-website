@@ -336,6 +336,118 @@
       "materials": null,
       "colors": [],
       "price": null
+    },
+    {
+      "id": "navy-booth-sofa",
+      "category": "sofas",
+      "name": "High-Back Booth Sofa",
+      "short": "A two-seat booth sofa with tall navy fabric wings, a tan leather back cushion and a light grey seat on a chrome frame. Gives privacy in open offices and lounges.",
+      "images": [
+        "images/navy-booth-sofa.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "tufted-leather-armchairs",
+      "category": "sofas",
+      "name": "Buttoned Leather Armchair",
+      "short": "A classic armchair with a button-tufted back in soft taupe leather and dark wooden legs, shown in a lounge setting.",
+      "images": [
+        "images/tufted-leather-armchairs.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "grey-curved-corner-sofa",
+      "category": "sofas",
+      "name": "Curved Corner Sofa",
+      "short": "A soft light grey corner sofa with rounded arms and piped edges, shown with a round black coffee table.",
+      "images": [
+        "images/grey-curved-corner-sofa.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "red-leather-lounge-chairs",
+      "category": "sofas",
+      "name": "Leather Lounge Armchairs",
+      "short": "Square-arm lounge armchairs in red and brown leather on slim metal legs, shown in a lounge with matching side tables.",
+      "images": [
+        "images/red-leather-lounge-chairs.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "waiting-hall-benches",
+      "category": "sofas",
+      "name": "Waiting Area Benches",
+      "short": "Long upholstered benches with dark backs and teal seats, made for busy waiting halls and customer areas.",
+      "images": [
+        "images/waiting-hall-benches.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "hexagon-workstation",
+      "category": "desks",
+      "name": "Hexagon Workstation",
+      "short": "A six-person workstation with a light oak top, white drawer units and grey fabric screens around a central storage core.",
+      "images": [
+        "images/hexagon-workstation.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "marble-chrome-coffee-table",
+      "category": "tables",
+      "name": "Marble Coffee Table",
+      "short": "A rectangular coffee table with a warm marble top on a polished chrome frame.",
+      "images": [
+        "images/marble-chrome-coffee-table.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "arched-wall-panels",
+      "category": "panels",
+      "name": "Arched Wall Panels",
+      "short": "Padded wall panels in arched shapes and bright colours, mounted on a base. Ideal for schools, waiting areas and play spaces.",
+      "images": [
+        "images/arched-wall-panels.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
     }
   ]
 }

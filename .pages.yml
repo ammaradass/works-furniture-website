@@ -31,6 +31,7 @@ content:
                 - { value: tables, label: Tables }
                 - { value: cabinets, label: Cabinets }
                 - { value: beds, label: Beds }
+                - { value: panels, label: Wall Panels }
           - { name: short, label: Short description, type: text }
           - { name: images, label: Photos (first one is the main photo), type: image, list: true }
           - { name: dims, label: "Size, e.g. 200 x 90 x 75 (W x D x H in cm)", type: string }

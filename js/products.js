@@ -38,6 +38,7 @@ const CATEGORIES = [
   { id: "tables",     name: "Tables",           blurb: "Coffee tables and side tables for lounges, lobbies and living rooms." },
   { id: "cabinets",  name: "Cabinets",         blurb: "Elegant storage and wall units for homes, offices and hotels." },
   { id: "beds",      name: "Beds",             blurb: "Upholstered beds and bedroom furniture for homes and hotels." },
+  { id: "panels",    name: "Wall Panels",      blurb: "Padded and decorative wall panels for schools, offices and waiting areas." },
 ];
 
 /* Products now live in data/products.json and are edited from the admin page
