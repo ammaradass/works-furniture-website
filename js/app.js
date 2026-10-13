@@ -113,6 +113,7 @@ function contact() {
   $("#send-to").innerHTML = '<option value="" disabled selected>Choose a person</option>' + SITE.whatsapp.map((c, i) => `<option value="${i}">${esc(c.name)} (${c.display})</option>`).join("");
   $("#c-phone").textContent = "Tel: " + SITE.phone;
   $("#c-phone").href = "tel:" + SITE.phone.replace(/\s/g, "");
+  $("#c-sales").innerHTML = SITE.whatsapp.map((c) => `<a href="tel:+${c.number}">${esc(c.name)}: ${c.display}</a>`).join("<br>");
   $("#c-email").textContent = SITE.email;
   $("#c-email").href = "mailto:" + SITE.email;
   $("#c-addr").textContent = SITE.address;
