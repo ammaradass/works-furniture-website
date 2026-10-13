@@ -448,6 +448,20 @@
       "materials": null,
       "colors": [],
       "price": null
+    },
+    {
+      "id": "two-tone-sofa",
+      "category": "sofas",
+      "name": "Two-Tone Sofa",
+      "short": "A slim modern sofa with tan seat and back cushions on a chocolate-brown frame, raised on black metal legs. Ideal for showrooms, lobbies and waiting areas.",
+      "images": [
+        "images/two-tone-sofa-pair.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
     }
   ]
 }
