@@ -462,6 +462,175 @@
       "materials": null,
       "colors": [],
       "price": null
+    },
+    {
+      "id": "slatted-booth-seating",
+      "category": "sofas",
+      "name": "Slatted Booth Seating",
+      "short": "A curved bench with patterned seat cushions and sage-green back cushions, framed by a tall slatted wood screen. A cosy, semi-private spot for lobbies and lounges.",
+      "images": [
+        "images/slatted-booth-seating.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "waiting-area-sofas",
+      "category": "sofas",
+      "name": "Waiting Area Sofas",
+      "short": "Rows of tan sofas joined by white-framed side tables. Made for busy waiting halls and customer service centres, and can carry your logo.",
+      "images": [
+        "images/waiting-area-sofas.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "curved-sectional-sofa",
+      "category": "sofas",
+      "name": "Curved Sectional Sofa",
+      "short": "A long curved sofa in four sections, shown with matching beige armchairs on wooden legs. A welcoming centrepiece for lobbies and reception areas.",
+      "images": [
+        "images/curved-sectional-sofa.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "cream-curved-lobby-sofas",
+      "category": "sofas",
+      "name": "Cream Curved Lobby Sofas",
+      "short": "A pair of soft, kidney-shaped sofas in cream with a rounded back. Placed facing each other, they frame a lobby or atrium beautifully.",
+      "images": [
+        "images/cream-curved-lobby-sofas.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "curved-fabric-sofa",
+      "category": "sofas",
+      "name": "Curved Fabric Sofa",
+      "short": "A curved sofa in textured beige fabric with plenty of matching cushions. Soft and inviting for living rooms and private offices.",
+      "images": [
+        "images/curved-fabric-sofa.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "brown-sofa-set",
+      "category": "sofas",
+      "name": "Brown Sofa Set",
+      "short": "A two-seater and three-seater in dark brown with tan outer sides, raised on slim black legs. Smart and simple for offices and meeting lounges.",
+      "images": [
+        "images/brown-sofa-set.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "grey-loveseat-wood-arms",
+      "category": "sofas",
+      "name": "Grey Loveseat with Wood Arms",
+      "short": "A two-seater in grey with stitched detailing and wood-finish armrest tops. Hard-wearing and neat for offices and waiting rooms.",
+      "images": [
+        "images/grey-loveseat-wood-arms.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "red-service-counter",
+      "category": "reception",
+      "name": "Red Service Counter",
+      "short": "A long service counter with a white top, red front panels and glass dividers between stations. Built for banks, government offices and customer service centres.",
+      "images": [
+        "images/red-service-counter-1.jpg",
+        "images/red-service-counter-2.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "bench-workstation-screens",
+      "category": "workstations",
+      "name": "Bench Workstation with Fabric Screens",
+      "short": "A shared bench desk with a wood-finish top, black legs, cable ports and soft fabric screens between each seat.",
+      "images": [
+        "images/bench-workstation-screens.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "hexagon-workstation-green",
+      "category": "workstations",
+      "name": "Hexagon Workstation with Green Screens",
+      "short": "A hexagon cluster of desks with green fabric screens, set beside a tall planter. Fits a whole team in a compact footprint.",
+      "images": [
+        "images/hexagon-workstation-green.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "l-shaped-executive-desk",
+      "category": "desks",
+      "name": "L-Shaped Executive Desk",
+      "short": "An L-shaped desk in light wood finish with a side unit of open shelves and a drawer, plus a cable port in the top.",
+      "images": [
+        "images/l-shaped-executive-desk.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "round-coffee-tables-set",
+      "category": "tables",
+      "name": "Round Coffee Table Set",
+      "short": "Two overlapping round coffee tables on drum bases, one in black and one with a white marble-look top. Shown with a cream sofa, armchair and orange pouf.",
+      "images": [
+        "images/round-coffee-tables-set.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
     }
   ]
 }
