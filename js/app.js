@@ -46,6 +46,13 @@ function layout(active) {
     <a class="fab" href="${waLink("Hello, I would like to enquire about your furniture.")}" target="_blank" rel="noopener">WhatsApp</a>`;
 }
 
+/* Tells Google the main address of this page (for pages that change with ?cat= or ?id=). */
+function setCanonical(path) {
+  let l = document.querySelector('link[rel="canonical"]');
+  if (!l) { l = document.createElement("link"); l.rel = "canonical"; document.head.appendChild(l); }
+  l.href = "https://worksfurniture.com/" + path;
+}
+
 /* ---- Pages ---- */
 function home() {
   $("#categories").innerHTML = CATEGORIES.map((c) => {
@@ -65,6 +72,8 @@ function category() {
   $("#cat-title").textContent = c ? c.name : "Our Collections";
   $("#cat-blurb").textContent = c ? c.blurb : "Browse sofas, reception desks, office desks, meeting tables, tables, cabinets, beds and wall panels.";
   document.title = `${c ? c.name : "Collections"} | ${SITE.name}, ${SITE.city}`;
+  if (c) document.querySelector('meta[name="description"]').content = `${c.blurb} Made in our factory in ${SITE.city}.`;
+  setCanonical(c ? `category.html?cat=${c.id}` : "category.html");
   const list = PRODUCTS.filter((p) => !c || p.category === c.id);
   $("#list").innerHTML = list.length ? list.map(card).join("") : "<p>New pieces arriving soon.</p>";
 }
@@ -73,13 +82,14 @@ function product() {
   const p = PRODUCTS.find((x) => x.id === param("id"));
   if (!p) { $("#product").innerHTML = '<p>Product not found. <a href="category.html"><u>Browse collections</u></a></p>'; return; }
   document.title = `${p.name} | ${catName(p.category)} | ${SITE.short}, ${SITE.city}`;
-  document.querySelector('meta[name="description"]').content = p.short;
+  document.querySelector('meta[name="description"]').content = p.short || `${p.name} – ${catName(p.category)} made by ${SITE.name}, ${SITE.city}.`;
+  setCanonical(`product.html?id=${encodeURIComponent(p.id)}`);
   const row = (k, v) => `<div><dt>${k}</dt><dd>${v ? esc(v) : '<span class="todo">Available on request</span>'}</dd></div>`;
   const msg = `Hello, I'm interested in "${p.name}" (${catName(p.category)}). Please send me details.`;
   const imgs = p.images || [];
   $("#product").innerHTML = `
     <div class="gallery"><div class="main" id="main">${picture(p, true)}</div>
-      ${imgs.length > 1 ? `<div class="thumbs">${imgs.map((s, i) => `<img src="${esc(s)}" alt="${esc(p.name)} view ${i + 1}" class="${i ? "" : "on"}" loading="lazy">`).join("")}</div>` : ""}</div>
+      ${imgs.length > 1 ? `<div class="thumbs">${imgs.map((s, i) => `<img src="${esc(s)}" alt="${esc(p.name)} – ${esc(catName(p.category))}, photo ${i + 1}" class="${i ? "" : "on"}" loading="lazy">`).join("")}</div>` : ""}</div>
     <div class="info">
       <div class="crumbs"><a href="index.html">Home</a> / <a href="category.html?cat=${p.category}">${catName(p.category)}</a></div>
       <h1 style="font-size:clamp(2rem,5vw,3rem)">${esc(p.name)}</h1>
