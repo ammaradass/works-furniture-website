@@ -4,7 +4,6 @@
 const $ = (s) => document.querySelector(s);
 const param = (k) => new URLSearchParams(location.search).get(k);
 const waLink = (text, c = SITE.whatsapp[0]) => `https://wa.me/${c.number}?text=${encodeURIComponent(text)}`;
-const waButtons = (text, cls = "btn wa") => SITE.whatsapp.map((c) => `<a class="${cls}" target="_blank" rel="noopener" href="${waLink(text, c)}">WhatsApp ${esc(c.name)}</a>`).join("");
 const catName = (id) => (CATEGORIES.find((c) => c.id === id) || {}).name || "";
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const priceText = (p) => (p.price ? `AED ${Number(p.price).toLocaleString()}` : "Price on request");
@@ -42,8 +41,7 @@ function layout(active) {
       <li><a href="mailto:${SITE.email}">${esc(SITE.email)}</a></li><li>${esc(SITE.city)}</li></ul></div>
     <div><h4>Visit the factory</h4><ul><li>${esc(SITE.address)}</li><li>${esc(SITE.hours)}</li>
       <li><a href="${SITE.mapLink}" target="_blank" rel="noopener">Get directions on Google Maps</a></li></ul></div></div>
-    <div class="copy">© ${new Date().getFullYear()} ${esc(SITE.legalName || SITE.name)}. All rights reserved.</div></div>
-    <a class="fab" href="${waLink("Hello, I would like to enquire about your furniture.")}" target="_blank" rel="noopener">WhatsApp</a>`;
+    <div class="copy">© ${new Date().getFullYear()} ${esc(SITE.legalName || SITE.name)}. All rights reserved.</div></div>`;
 }
 
 /* Tells Google the main address of this page (for pages that change with ?cat= or ?id=). */
@@ -85,7 +83,6 @@ function product() {
   document.querySelector('meta[name="description"]').content = p.short || `${p.name} – ${catName(p.category)} made by ${SITE.name}, ${SITE.city}.`;
   setCanonical(`product.html?id=${encodeURIComponent(p.id)}`);
   const row = (k, v) => `<div><dt>${k}</dt><dd>${v ? esc(v) : '<span class="todo">Available on request</span>'}</dd></div>`;
-  const msg = `Hello, I'm interested in "${p.name}" (${catName(p.category)}). Please send me details.`;
   const imgs = p.images || [];
   $("#product").innerHTML = `
     <div class="gallery"><div class="main" id="main">${picture(p, true)}</div>
@@ -101,8 +98,7 @@ function product() {
         ${row("Colours / fabrics", (p.colors || []).join(", "))}
       </dl>
       <div class="btn-row">
-        ${waButtons(msg)}
-        <a class="btn ghost" href="contact.html?product=${encodeURIComponent(p.name)}">Send an enquiry</a></div></div>`;
+        <a class="btn" href="contact.html?product=${encodeURIComponent(p.name)}">Send an enquiry</a></div></div>`;
   document.querySelectorAll(".thumbs img").forEach((t) => (t.onclick = () => {
     $("#main").innerHTML = `<img src="${t.src}" alt="${t.alt}">`;
     document.querySelectorAll(".thumbs img").forEach((o) => o.classList.toggle("on", o === t));
@@ -114,24 +110,23 @@ function contact() {
   sel.innerHTML = '<option value="General enquiry">General enquiry</option>' +
     PRODUCTS.map((p) => `<option>${esc(p.name)}</option>`).join("");
   if (param("product")) sel.value = param("product");
-  $("#send-to").innerHTML = SITE.whatsapp.map((c, i) => `<option value="${i}">${esc(c.name)} (${c.display})</option>`).join("");
+  $("#send-to").innerHTML = '<option value="" disabled selected>Choose a person</option>' + SITE.whatsapp.map((c, i) => `<option value="${i}">${esc(c.name)} (${c.display})</option>`).join("");
   $("#c-phone").textContent = "Tel: " + SITE.phone;
   $("#c-phone").href = "tel:" + SITE.phone.replace(/\s/g, "");
   $("#c-email").textContent = SITE.email;
   $("#c-email").href = "mailto:" + SITE.email;
   $("#c-addr").textContent = SITE.address;
   $("#c-hours").textContent = SITE.hours;
-  $("#c-wa").innerHTML = waButtons("Hello, I would like to enquire about your furniture.");
   $("#c-directions").href = SITE.mapLink;
   $("#map-directions").href = SITE.mapLink;
   $("#map-addr").textContent = SITE.legalName + " · " + SITE.address + (SITE.plusCode ? " · " + SITE.plusCode : "");
   $("#map").src = "https://www.google.com/maps?q=" + encodeURIComponent(SITE.mapSearch) + "&output=embed";
-  /* The form opens WhatsApp with the message filled in – no server needed. */
+  /* The form opens WhatsApp chat with the chosen person, with the message filled in – no server needed. */
   $("#enquiry").onsubmit = (e) => {
     e.preventDefault();
     const f = new FormData(e.target);
     const text = `New enquiry\nName: ${f.get("name")}\nPhone: ${f.get("phone")}\nEmail: ${f.get("email") || "-"}\nInterested in: ${f.get("interest")}\nMessage: ${f.get("message")}`;
-    window.open(waLink(text, SITE.whatsapp[+$("#send-to").value]), "_blank");
+    window.open(waLink(text, SITE.whatsapp[+f.get("sendto")]), "_blank");
   };
 }
 

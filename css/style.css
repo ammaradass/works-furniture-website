@@ -6,7 +6,6 @@
   --bg: #ffffff;
   --soft: #f6f3ee;
   --line: #e6e1d9;
-  --wa: #1fa855;
   --serif: "Cormorant Garamond", Georgia, serif;
   --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
@@ -48,8 +47,6 @@ nav a:hover, nav a.active { border-color: var(--gold); }
 .btn:hover { background: var(--gold-dark); border-color: var(--gold-dark); }
 .btn.ghost { background: transparent; color: var(--ink); }
 .btn.ghost:hover { background: var(--ink); color: #fff; }
-.btn.wa { background: var(--wa); border-color: var(--wa); border-radius: 40px; flex: 1 1 0; min-width: 180px; max-width: 260px; text-align: center; }
-.btn.wa:hover { background: #178a45; border-color: #178a45; }
 .btn-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
 
 /* Hero */
@@ -136,7 +133,6 @@ footer h4 { color: #fff; font-family: var(--serif); font-size: 1.2rem; font-weig
 footer li { list-style: none; margin-bottom: 6px; }
 footer a:hover { color: var(--gold); }
 .copy { border-top: 1px solid #3a362f; margin-top: 32px; padding-top: 18px; font-size: .8rem; color: #8d877b; }
-.fab { position: fixed; right: 16px; bottom: 16px; z-index: 20; background: var(--wa); color: #fff; padding: 13px 20px; border-radius: 40px; font-size: .9rem; box-shadow: 0 6px 20px rgba(0,0,0,.25); }
 
 /* Projects page */
 .projects { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }

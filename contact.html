@@ -68,7 +68,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-<link rel="stylesheet" href="css/style.css?v=20261013d">
+<link rel="stylesheet" href="css/style.css?v=20261013e">
 </head>
 <body data-page="contact">
 <header id="site-header"></header>
@@ -81,15 +81,14 @@
     <p><strong>Factory address</strong><span id="c-addr"></span></p>
     <p><strong>Visiting hours</strong><span id="c-hours"></span></p>
     <p><a class="btn ghost" id="c-directions" href="#" target="_blank" rel="noopener">Get directions on Google Maps</a></p>
-    <p><strong>WhatsApp</strong></p><div class="btn-row" id="c-wa" style="margin-top:0"></div>
   </div>
   <form id="enquiry">
     <label for="name">Your name</label><input id="name" name="name" required autocomplete="name">
     <label for="phone">Phone / WhatsApp</label><input id="phone" name="phone" type="tel" required autocomplete="tel">
     <label for="email">Email (optional)</label><input id="email" name="email" type="email" autocomplete="email">
     <label for="interest">Interested in</label><select id="interest" name="interest"></select>
-    <label for="send-to">Send to</label><select id="send-to"></select>
-    <label for="message">Message</label><textarea id="message" name="message" required></textarea>
+    <label for="send-to">Send to</label><select id="send-to" name="sendto" required></select>
+    <label for="message">Message (describe what you need)</label><textarea id="message" name="message" required></textarea>
     <div class="btn-row"><button class="btn" type="submit">Send via WhatsApp</button></div>
   </form>
 </div>
@@ -101,7 +100,7 @@
 </section>
 </main>
 <footer id="site-footer"></footer>
-<script src="js/products.js?v=20261013d"></script>
-<script src="js/app.js?v=20261013d"></script>
+<script src="js/products.js?v=20261013e"></script>
+<script src="js/app.js?v=20261013e"></script>
 </body>
 </html>
