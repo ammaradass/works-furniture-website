@@ -4,8 +4,8 @@
    ========================================================== */
 
 const SITE = {
-  name: "Works Manufacturing Furniture",
-  short: "Works Manufacturing Furniture",
+  name: "Works Manufacturing Office Furniture L.L.C",
+  short: "Works Manufacturing Office Furniture L.L.C",
   /* Official company name (shown in the footer). */
   legalName: "Works Manufacturing Office Furniture L.L.C",
   city: "Umm Al Quwain, UAE",
