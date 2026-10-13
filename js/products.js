@@ -12,7 +12,7 @@ const SITE = {
   phone: "+971 6 767 8388",            // landline
   /* WhatsApp contacts. The FIRST one is used for the floating button. */
   whatsapp: [
-    { name: "Karam Kilan", number: "971509746547", display: "+971 50 974 6547" },
+    { name: "KARAM HILAN", number: "971509746547", display: "+971 50 974 6547" },
     { name: "Ammar Adas",  number: "971505186336", display: "+971 50 518 6336" },
     { name: "Secretary",   number: "971529777309", display: "+971 52 977 7309" },
   ],
