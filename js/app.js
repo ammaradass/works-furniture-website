@@ -136,19 +136,63 @@ async function projects() {
   let list = [];
   try { list = (await fetch("data/projects.json", { cache: "no-cache" }).then((r) => r.json())).projects || []; } catch (e) {}
   const types = [...new Set(list.map((x) => x.type).filter(Boolean))];
+  let shown = [];
   const draw = (t) => {
     $("#filters").innerHTML = ["All", ...types].map((x) => `<a href="#" data-t="${esc(x)}" class="${x === t ? "active" : ""}">${esc(x)}</a>`).join("");
+    shown = [];
     $("#projects").innerHTML = list.filter((x) => t === "All" || x.type === t).map((x) => {
       const items = (x.products || []).map((id) => PRODUCTS.find((p) => p.id === id)).filter(Boolean);
+      const at = shown.length;
+      (x.images && x.images.length ? x.images : [x.image]).forEach((src) => shown.push({ src, title: x.title }));
       return `<article class="project">
-        <a class="pic" href="${esc(x.image)}" target="_blank" rel="noopener"><img src="${esc(x.image)}" alt="${esc(x.title)} furnished by ${esc(SITE.short)}" loading="lazy"></a>
+        <a class="pic" href="${esc(x.image)}" data-i="${at}"><img src="${esc(x.image)}" alt="${esc(x.title)} furnished by ${esc(SITE.short)}" loading="lazy"></a>
         <div class="body"><div class="tag">${esc(x.type || "")}</div><h3>${esc(x.title)}</h3><p>${esc(x.short || "")}</p>
         <div class="links">${items.map((p) => `<a href="product.html?id=${encodeURIComponent(p.id)}">See the ${esc(p.name)}</a>`).join("")}
         <a href="${waLink("Hello, I saw your " + x.title + " project on your website and would like something similar.")}" target="_blank" rel="noopener">Ask about a project like this</a></div></div></article>`;
     }).join("");
   };
   $("#filters").onclick = (e) => { const a = e.target.closest("a"); if (a) { e.preventDefault(); draw(a.dataset.t); } };
+  $("#projects").onclick = (e) => { const a = e.target.closest("a.pic"); if (a) { e.preventDefault(); lightbox(shown, +a.dataset.i); } };
   draw("All");
+}
+
+/* Full-screen photo viewer: arrows or swipe to move, Esc / X / click outside to close. */
+function lightbox(photos, i) {
+  let box = $("#lightbox");
+  if (!box) {
+    box = document.createElement("div");
+    box.id = "lightbox";
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-modal", "true");
+    box.innerHTML = `<button class="lb-close" aria-label="Close">&times;</button>
+      <button class="lb-prev" aria-label="Previous photo">&#8249;</button>
+      <figure><img alt=""><figcaption></figcaption></figure>
+      <button class="lb-next" aria-label="Next photo">&#8250;</button>`;
+    document.body.appendChild(box);
+  }
+  const img = box.querySelector("img"), cap = box.querySelector("figcaption");
+  const show = (n) => {
+    i = (n + photos.length) % photos.length;
+    img.src = photos[i].src;
+    img.alt = photos[i].title;
+    cap.textContent = photos.length > 1 ? `${photos[i].title} · ${i + 1} / ${photos.length}` : photos[i].title;
+  };
+  const close = () => { box.classList.remove("open"); document.body.style.overflow = ""; document.removeEventListener("keydown", key); };
+  const key = (e) => { if (e.key === "Escape") close(); if (e.key === "ArrowLeft") show(i - 1); if (e.key === "ArrowRight") show(i + 1); };
+  let x0 = null;
+  box.ontouchstart = (e) => { x0 = e.touches[0].clientX; };
+  box.ontouchend = (e) => { if (x0 === null) return; const d = e.changedTouches[0].clientX - x0; x0 = null; if (Math.abs(d) > 50 && photos.length > 1) show(d < 0 ? i + 1 : i - 1); };
+  box.onclick = (e) => {
+    if (e.target.closest(".lb-prev")) show(i - 1);
+    else if (e.target.closest(".lb-next")) show(i + 1);
+    else if (e.target.closest(".lb-close") || e.target === box || e.target.tagName === "FIGURE") close();
+  };
+  box.classList.toggle("single", photos.length < 2);
+  show(i);
+  box.classList.add("open");
+  document.body.style.overflow = "hidden";
+  document.addEventListener("keydown", key);
+  box.querySelector(".lb-close").focus();
 }
 
 const slug = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
