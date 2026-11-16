@@ -631,6 +631,34 @@
       "materials": null,
       "colors": [],
       "price": null
+    },
+    {
+      "id": "grey-swivel-office-chair",
+      "category": "sofas",
+      "name": "Grey Swivel Office Chair",
+      "short": "A swivel chair upholstered in grey fabric with a curved arm-and-back shell, white outer shell and a polished chrome five-star base on castors.",
+      "images": [
+        "images/grey-swivel-office-chair.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "brown-velvet-armchair",
+      "category": "sofas",
+      "name": "Brown Velvet Armchair",
+      "short": "A curved-back armchair in dark brown velvet on a brushed gold-finish tubular metal cantilever frame.",
+      "images": [
+        "images/brown-velvet-armchair.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
     }
   ]
 }
