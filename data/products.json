@@ -659,6 +659,34 @@
       "materials": null,
       "colors": [],
       "price": null
+    },
+    {
+      "id": "grey-textured-lounge-chair",
+      "category": "sofas",
+      "name": "Grey Textured Lounge Chair",
+      "short": "A soft, rounded lounge chair in grey textured fabric with a curved high back and a brushed gold-finish base.",
+      "images": [
+        "images/grey-textured-lounge-chair.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
+    },
+    {
+      "id": "tan-armchair-black-legs",
+      "category": "sofas",
+      "name": "Tan Armchair with Black Legs",
+      "short": "A square-profile armchair in tan upholstery with stitched seams, a loose seat cushion and slim black metal legs.",
+      "images": [
+        "images/tan-armchair-black-legs.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
     }
   ]
 }
