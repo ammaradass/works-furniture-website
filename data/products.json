@@ -212,20 +212,6 @@
       "price": null
     },
     {
-      "id": "y-shaped-lobby-seating",
-      "category": "sofas",
-      "name": "Y-Shaped Lobby Seating",
-      "short": "Three-way bench seating with a built-in planter at the centre. Groups of seats for large lobbies, malls and public spaces.",
-      "images": [
-        "images/y-shaped-lobby-seating.jpg"
-      ],
-      "featured": false,
-      "dims": null,
-      "materials": null,
-      "colors": [],
-      "price": null
-    },
-    {
       "id": "wave-atrium-seating",
       "category": "sofas",
       "name": "Wave Atrium Seating",
