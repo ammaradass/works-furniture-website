@@ -673,6 +673,20 @@
       "materials": null,
       "colors": [],
       "price": null
+    },
+    {
+      "id": "white-two-seat-sofa",
+      "category": "sofas",
+      "name": "White Two-Seat Sofa",
+      "short": "A clean-lined two-seat sofa in white upholstery with loose seat and back cushions, dark trim on the arms and tapered dark wood legs.",
+      "images": [
+        "images/white-two-seat-sofa.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
     }
   ]
 }
