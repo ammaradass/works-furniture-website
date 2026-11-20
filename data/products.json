@@ -687,6 +687,20 @@
       "materials": null,
       "colors": [],
       "price": null
+    },
+    {
+      "id": "red-fabric-sofa",
+      "category": "sofas",
+      "name": "Red Fabric Sofa",
+      "short": "A clean-lined three-seat sofa in red fabric upholstery with angled arms and slim metal legs.",
+      "images": [
+        "images/red-fabric-sofa.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
     }
   ]
 }
