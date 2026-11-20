@@ -701,6 +701,20 @@
       "materials": null,
       "colors": [],
       "price": null
+    },
+    {
+      "id": "blue-textured-armchair",
+      "category": "sofas",
+      "name": "Blue Textured Armchair",
+      "short": "A compact armchair in soft light-blue textured upholstery with a curved wraparound back, piped edges and a sculpted base.",
+      "images": [
+        "images/blue-textured-armchair.jpg"
+      ],
+      "featured": false,
+      "dims": null,
+      "materials": null,
+      "colors": [],
+      "price": null
     }
   ]
 }
